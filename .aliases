@@ -1,0 +1,21 @@
+alias zshconfig="vim ~/.zshrc"
+alias homestead="__homestead() { (cd ~/Homestead && vagrant \$*); unset -f __homestead; }; __homestead"
+alias vm="homestead ssh"
+alias art="php artisan"
+alias rmf="rm -rf"
+alias ..='cd ..'
+alias c='clear'
+alias ls='ls --color=auto'
+alias mkdir='mkdir -pv'
+alias yii="php yii"
+alias hosts="sudo vim /etc/hosts"
+alias code="cd ~/Code"
+
+# Git
+alias gs="git status"
+alias gl="git log"
+alias gcom="git checkout master"
+alias gaa="git add ."
+alias gc="git commit -m "
+alias gp="git push"
+alias nah="git reset --hard && git clean -df"
