@@ -1,6 +1,10 @@
 alias zshconfig="vim ~/.zshrc"
+
+# Servers
 alias homestead="__homestead() { (cd ~/Homestead && vagrant \$*); unset -f __homestead; }; __homestead"
+alias hup="homestead up"
 alias vm="homestead ssh"
+
 alias art="php artisan"
 alias rmf="rm -rf"
 alias ..='cd ..'
@@ -9,13 +13,17 @@ alias ls='ls --color=auto'
 alias mkdir='mkdir -pv'
 alias yii="php yii"
 alias hosts="sudo vim /etc/hosts"
+
+# Projects
 alias code="cd ~/Code"
+alias w2p="cd ~/Code/web2print"
 
 # Git
-alias gs="git status"
-alias gl="git log"
-alias gcom="git checkout master"
+alias ga="git add"
 alias gaa="git add ."
 alias gc="git commit -m "
+alias gs="git status"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gcom="git checkout master"
 alias gp="git push"
-alias nah="git reset --hard && git clean -df"
+alias nah="git reset --hard; git clean -df"
